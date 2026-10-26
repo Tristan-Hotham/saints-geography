@@ -1,0 +1,1556 @@
+{
+ "n_churches": 36933,
+ "n_dedicated": 20552,
+ "n_hist": 17116,
+ "n_saints": 708,
+ "top": [
+  [
+   "Mary",
+   2524
+  ],
+  [
+   "All Saints",
+   1489
+  ],
+  [
+   "Peter",
+   1040
+  ],
+  [
+   "Michael",
+   864
+  ],
+  [
+   "Andrew",
+   847
+  ],
+  [
+   "Holy Trinity",
+   653
+  ],
+  [
+   "John the Baptist",
+   561
+  ],
+  [
+   "James",
+   557
+  ],
+  [
+   "John",
+   448
+  ],
+  [
+   "Christ Church",
+   430
+  ],
+  [
+   "Nicholas",
+   414
+  ],
+  [
+   "Paul",
+   350
+  ],
+  [
+   "Margaret",
+   296
+  ],
+  [
+   "Peter and Paul",
+   287
+  ],
+  [
+   "John the Evangelist",
+   279
+  ],
+  [
+   "George",
+   255
+  ],
+  [
+   "Lawrence",
+   237
+  ],
+  [
+   "Luke",
+   229
+  ],
+  [
+   "Mary Magdalene",
+   229
+  ],
+  [
+   "Martin",
+   206
+  ],
+  [
+   "Thomas",
+   196
+  ],
+  [
+   "Mark",
+   188
+  ],
+  [
+   "Leonard",
+   179
+  ],
+  [
+   "Bartholomew",
+   169
+  ],
+  [
+   "Giles",
+   156
+  ],
+  [
+   "Stephen",
+   140
+  ],
+  [
+   "Matthew",
+   139
+  ],
+  [
+   "Barnabas",
+   131
+  ],
+  [
+   "Holy Cross",
+   121
+  ],
+  [
+   "Anne",
+   114
+  ],
+  [
+   "Helen",
+   109
+  ],
+  [
+   "Catherine",
+   103
+  ],
+  [
+   "Cuthbert",
+   103
+  ],
+  [
+   "David",
+   102
+  ],
+  [
+   "Saviour",
+   89
+  ],
+  [
+   "Emmanuel",
+   87
+  ],
+  [
+   "Francis",
+   78
+  ],
+  [
+   "Augustine",
+   77
+  ],
+  [
+   "Edmund",
+   76
+  ],
+  [
+   "Chad",
+   76
+  ],
+  [
+   "Oswald",
+   76
+  ],
+  [
+   "Good Shepherd",
+   64
+  ],
+  [
+   "Thomas Becket",
+   64
+  ],
+  [
+   "Swithun",
+   57
+  ],
+  [
+   "Wilfrid",
+   55
+  ],
+  [
+   "Philip",
+   54
+  ],
+  [
+   "Aidan",
+   54
+  ],
+  [
+   "Botolph",
+   54
+  ],
+  [
+   "Clement",
+   50
+  ],
+  [
+   "Ascension",
+   50
+  ],
+  [
+   "Alban",
+   50
+  ],
+  [
+   "Columba",
+   48
+  ],
+  [
+   "Bride",
+   41
+  ],
+  [
+   "Hilda",
+   38
+  ],
+  [
+   "Edward",
+   33
+  ],
+  [
+   "Denys",
+   32
+  ],
+  [
+   "Christopher",
+   31
+  ],
+  [
+   "Gregory",
+   30
+  ],
+  [
+   "Gabriel",
+   30
+  ],
+  [
+   "Holy Spirit",
+   29
+  ]
+ ],
+ "nation_top": {
+  "England": {
+   "Mary": 2351,
+   "All Saints": 1455,
+   "Peter": 981,
+   "Andrew": 786,
+   "Michael": 785,
+   "Holy Trinity": 590,
+   "John the Baptist": 540,
+   "James": 527,
+   "Christ Church": 406,
+   "Nicholas": 398,
+   "John": 386,
+   "Paul": 325
+  },
+  "Wales": {
+   "Mary": 130,
+   "David": 71,
+   "Michael": 68,
+   "Peter": 46,
+   "John": 36,
+   "Holy Trinity": 27,
+   "All Saints": 24,
+   "Christ Church": 18,
+   "James": 16,
+   "John the Baptist": 15,
+   "Paul": 15,
+   "Cadoc": 14
+  },
+  "Scotland": {
+   "Andrew": 50,
+   "Mary": 43,
+   "Holy Trinity": 36,
+   "John": 26,
+   "Columba": 24,
+   "Margaret": 19,
+   "Ninian": 18,
+   "James": 14,
+   "Peter": 13,
+   "Bride": 11,
+   "Michael": 11,
+   "All Saints": 10
+  }
+ },
+ "local": [
+  [
+   "Cornwall",
+   98
+  ],
+  [
+   "Gwynedd",
+   54
+  ],
+  [
+   "Dyfed",
+   41
+  ],
+  [
+   "Clwyd",
+   28
+  ],
+  [
+   "Powys",
+   24
+  ],
+  [
+   "Gwent",
+   17
+  ],
+  [
+   "South Glamorgan",
+   11
+  ],
+  [
+   "Kent",
+   10
+  ],
+  [
+   "Greater London",
+   10
+  ],
+  [
+   "Aberdeenshire",
+   9
+  ],
+  [
+   "Lincolnshire",
+   9
+  ],
+  [
+   "Devon",
+   8
+  ],
+  [
+   "Mid Glamorgan",
+   7
+  ],
+  [
+   "Highland",
+   7
+  ],
+  [
+   "Somerset",
+   6
+  ]
+ ],
+ "local_names": {
+  "Cornwall": [
+   "Alleyne",
+   "Austell",
+   "Breaca",
+   "Brevita",
+   "Breward",
+   "Briochus",
+   "Buryan",
+   "Carantoc",
+   "Cleer",
+   "Clether",
+   "Colan",
+   "Columb",
+   "Corentine",
+   "Crewenna",
+   "Crida",
+   "Cubert",
+   "Cuby",
+   "Cubys",
+   "Cyriacus",
+   "Elwyn",
+   "Endellion",
+   "Enoder",
+   "Enodoc",
+   "Erney",
+   "Erth",
+   "Ervan",
+   "Euny",
+   "Eval",
+   "Felicitas",
+   "Feock",
+   "Gennys",
+   "Germoe",
+   "Gerrans",
+   "Gluvias",
+   "Gomonda",
+   "Goran",
+   "Gothian",
+   "Gulval",
+   "Gwendron",
+   "Gwinear"
+  ],
+  "Gwynedd": [
+   "Aelhaearn",
+   "Afran",
+   "Bodfan",
+   "Brothen",
+   "Cadfan",
+   "Caffo",
+   "Caian",
+   "Cawrdaf",
+   "Ceinwen",
+   "Celynnin",
+   "Cian",
+   "Cwyfan",
+   "Cynfarwy",
+   "Cyngar",
+   "Cynhaiarn",
+   "Dona",
+   "Dwywe",
+   "Dyfnan",
+   "Edern",
+   "Edwen",
+   "Eilian",
+   "Eleth",
+   "Enddwyn",
+   "Engan",
+   "Eugrad",
+   "Ffinan",
+   "Figael",
+   "Gredifael",
+   "Gwawr",
+   "Gwenfaen",
+   "Gwenllwyfo",
+   "Gwynhoydl",
+   "Gwynin",
+   "Hywyn",
+   "Iestyn",
+   "Llwydian",
+   "Machraeth",
+   "Maelrhys",
+   "Maethlu",
+   "Mechell"
+  ],
+  "Dyfed": [
+   "Cadog",
+   "Caradoc",
+   "Caron",
+   "Cathan",
+   "Clydai",
+   "Clydwen",
+   "Colman",
+   "Cwrda",
+   "Cyffic",
+   "Cyndeyrn",
+   "Cynin",
+   "Cynwyl",
+   "Decumanus",
+   "Dogfael",
+   "Dogmaels",
+   "Elidyr",
+   "Gartheli",
+   "Gwenog",
+   "Gwnnws",
+   "Gwyndaf",
+   "Ina",
+   "Ishmael",
+   "Ishmaels",
+   "Ismael",
+   "Issel",
+   "Issells",
+   "Jeffrey",
+   "Justinian",
+   "Llawddog",
+   "Lleian",
+   "Meilyr",
+   "Rhian",
+   "Rhystyd",
+   "Sadwrnen",
+   "Sawyl",
+   "Sulien",
+   "Tygwydd",
+   "Tysul",
+   "Ursula",
+   "Vitalis"
+  ],
+  "Clwyd": [
+   "Asaph",
+   "Berres",
+   "Collen",
+   "Cynfarch",
+   "Cynfarchs",
+   "Cystennin",
+   "Digain",
+   "Doged",
+   "Dunawd",
+   "Dyfnog",
+   "Elidan",
+   "Ethelwold",
+   "Eurgain",
+   "Foddhyd",
+   "Garmons",
+   "Grwst",
+   "Gwyddelan",
+   "Marcella",
+   "Melyd",
+   "Mwrog",
+   "Nefydd",
+   "Rhychwyn",
+   "Saeran",
+   "Trillo",
+   "Tudclud",
+   "Tudno",
+   "Tyrnog",
+   "Winefride"
+  ],
+  "Powys": [
+   "Aelhaiarn",
+   "Afan",
+   "Bilo",
+   "Cadmarch",
+   "Cenau",
+   "Cewydd",
+   "Cynidr",
+   "Cynyw",
+   "Dogfan",
+   "Eigon",
+   "Ellyw",
+   "Garmon",
+   "Gastyn",
+   "Gwendoline",
+   "Gwendolines",
+   "Gwynog",
+   "Idloes",
+   "Issui",
+   "Llyr",
+   "Melangell",
+   "Myllin",
+   "Silin",
+   "Tyssil",
+   "Wyddn"
+  ],
+  "Gwent": [
+   "Arvan",
+   "Barrwg",
+   "Cadwaladr",
+   "Cenedlon",
+   "Christoper",
+   "Dennis",
+   "Gwladys",
+   "Llywel",
+   "Mabley",
+   "Mabon",
+   "Maughan",
+   "Odoceus",
+   "Tegfedd",
+   "Tewdric",
+   "Tudor",
+   "Tysoi",
+   "Wonnow"
+  ],
+  "South Glamorgan": [
+   "Bleddian",
+   "Brice",
+   "Canna",
+   "Dochdwy",
+   "Edeyrn",
+   "Elteyrn",
+   "Illytd",
+   "Isan",
+   "Mellons",
+   "Tathan",
+   "Timothys"
+  ],
+  "Kent": [
+   "Barnabus",
+   "Cosmus",
+   "Eanswith",
+   "Eanswythe",
+   "Justus",
+   "Phillips",
+   "Pualinus",
+   "Radigund",
+   "Rumwold",
+   "William"
+  ],
+  "Greater London": [
+   "Alfege",
+   "Alphage",
+   "Anselms",
+   "Benet",
+   "Dionis",
+   "Erkenwald",
+   "Helier",
+   "Marylebone",
+   "Osmunds",
+   "Sepulchre"
+  ],
+  "Aberdeenshire": [
+   "Combs",
+   "Cyrus",
+   "Fergus",
+   "Finan",
+   "Kane",
+   "Lesmo",
+   "Marnan",
+   "Palladius",
+   "Ternan"
+  ],
+  "Lincolnshire": [
+   "Adelwold",
+   "Genewys",
+   "Gilbert",
+   "Hibald",
+   "Hughs",
+   "Hybald",
+   "Medard",
+   "Norbert",
+   "Wulfram"
+  ],
+  "Devon": [
+   "Brannock",
+   "Brendan",
+   "Budeaux",
+   "Disens",
+   "Eustachius",
+   "Hieritha",
+   "Ida",
+   "Sylvester"
+  ],
+  "Mid Glamorgan": [
+   "Cein",
+   "Crallo",
+   "Cynwyds",
+   "Elvan",
+   "Fagan",
+   "Gwynno",
+   "Julius"
+  ],
+  "Highland": [
+   "Callan",
+   "Ciaran",
+   "Duthus",
+   "Finbar",
+   "Finnan",
+   "Maelrubha",
+   "Regulus"
+  ],
+  "Somerset": [
+   "Adhelm",
+   "Cleers",
+   "Congar",
+   "Decuman",
+   "Roch",
+   "Vincents"
+  ]
+ },
+ "distinct": [
+  {
+   "county": "Aberdeenshire",
+   "saint": "Holy Trinity",
+   "count": 4,
+   "lq": 2.38,
+   "second": "Andrew",
+   "top": "Andrew",
+   "n": 44
+  },
+  {
+   "county": "Angus",
+   "saint": "Andrew",
+   "count": 4,
+   "lq": 5.05,
+   "second": null,
+   "top": "Andrew",
+   "n": 16
+  },
+  {
+   "county": "Bedfordshire",
+   "saint": "Leonard",
+   "count": 4,
+   "lq": 2.3,
+   "second": "Mary Magdalene",
+   "top": "Mary",
+   "n": 166
+  },
+  {
+   "county": "Berkshire",
+   "saint": "Mark",
+   "count": 6,
+   "lq": 2.97,
+   "second": "Barnabas",
+   "top": "Mary",
+   "n": 184
+  },
+  {
+   "county": "Bristol",
+   "saint": "Holy Trinity",
+   "count": 4,
+   "lq": 1.87,
+   "second": "Peter",
+   "top": "Mary",
+   "n": 56
+  },
+  {
+   "county": "Buckinghamshire",
+   "saint": "Mary Magdalene",
+   "count": 9,
+   "lq": 2.76,
+   "second": "Giles",
+   "top": "Mary",
+   "n": 244
+  },
+  {
+   "county": "Cambridgeshire",
+   "saint": "Botolph",
+   "count": 5,
+   "lq": 4.83,
+   "second": "Augustine",
+   "top": "Mary",
+   "n": 328
+  },
+  {
+   "county": "Cheshire",
+   "saint": "Oswald",
+   "count": 7,
+   "lq": 6.31,
+   "second": "Philip",
+   "top": "Mary",
+   "n": 250
+  },
+  {
+   "county": "Clwyd",
+   "saint": "David",
+   "count": 6,
+   "lq": 6.54,
+   "second": "John",
+   "top": "Mary",
+   "n": 154
+  },
+  {
+   "county": "Cornwall",
+   "saint": "Petroc",
+   "count": 5,
+   "lq": 15.92,
+   "second": "Stephen",
+   "top": "Mary",
+   "n": 283
+  },
+  {
+   "county": "Cumbria",
+   "saint": "Kentigern",
+   "count": 8,
+   "lq": 21.46,
+   "second": "Cuthbert",
+   "top": "Mary",
+   "n": 319
+  },
+  {
+   "county": "Derbyshire",
+   "saint": "Anne",
+   "count": 7,
+   "lq": 3.41,
+   "second": "Edmund",
+   "top": "All Saints",
+   "n": 308
+  },
+  {
+   "county": "Devon",
+   "saint": "Petroc",
+   "count": 13,
+   "lq": 19.04,
+   "second": "Pancras",
+   "top": "Mary",
+   "n": 615
+  },
+  {
+   "county": "Dorset",
+   "saint": "Nicholas",
+   "count": 23,
+   "lq": 2.66,
+   "second": "Catherine",
+   "top": "Mary",
+   "n": 358
+  },
+  {
+   "county": "Durham",
+   "saint": "Cuthbert",
+   "count": 10,
+   "lq": 8.48,
+   "second": "Aidan",
+   "top": "Mary",
+   "n": 196
+  },
+  {
+   "county": "Dyfed",
+   "saint": "David",
+   "count": 18,
+   "lq": 14.66,
+   "second": "John",
+   "top": "Mary",
+   "n": 206
+  },
+  {
+   "county": "East Riding of Yorkshire",
+   "saint": "Martin",
+   "count": 6,
+   "lq": 2.47,
+   "second": "All Saints",
+   "top": "All Saints",
+   "n": 202
+  },
+  {
+   "county": "East Sussex",
+   "saint": "Richard",
+   "count": 5,
+   "lq": 24.91,
+   "second": "Emmanuel",
+   "top": "Mary",
+   "n": 229
+  },
+  {
+   "county": "Essex",
+   "saint": "Stephen",
+   "count": 8,
+   "lq": 2.02,
+   "second": "Barnabas",
+   "top": "Mary",
+   "n": 484
+  },
+  {
+   "county": "Fife",
+   "saint": "Margaret",
+   "count": 4,
+   "lq": 6.09,
+   "second": "Holy Trinity",
+   "top": "Holy Trinity",
+   "n": 38
+  },
+  {
+   "county": "Gloucestershire",
+   "saint": "Edward",
+   "count": 4,
+   "lq": 4.89,
+   "second": "Swithun",
+   "top": "Mary",
+   "n": 424
+  },
+  {
+   "county": "Greater London",
+   "saint": "Jude",
+   "count": 6,
+   "lq": 4.99,
+   "second": "Dunstan",
+   "top": "Mary",
+   "n": 980
+  },
+  {
+   "county": "Greater Manchester",
+   "saint": "Clement",
+   "count": 7,
+   "lq": 5.96,
+   "second": "Gabriel",
+   "top": "Mary",
+   "n": 402
+  },
+  {
+   "county": "Gwent",
+   "saint": "David",
+   "count": 7,
+   "lq": 8.1,
+   "second": "John",
+   "top": "Mary",
+   "n": 145
+  },
+  {
+   "county": "Gwynedd",
+   "saint": "David",
+   "count": 5,
+   "lq": 5.83,
+   "second": "Catherine",
+   "top": "Mary",
+   "n": 144
+  },
+  {
+   "county": "Hampshire",
+   "saint": "Faith",
+   "count": 4,
+   "lq": 5.51,
+   "second": "Good Shepherd",
+   "top": "Mary",
+   "n": 460
+  },
+  {
+   "county": "Herefordshire",
+   "saint": "Bartholomew",
+   "count": 9,
+   "lq": 3.95,
+   "second": "Michael",
+   "top": "Mary",
+   "n": 231
+  },
+  {
+   "county": "Hertfordshire",
+   "saint": "Lawrence",
+   "count": 6,
+   "lq": 1.79,
+   "second": "Christ Church",
+   "top": "Mary",
+   "n": 242
+  },
+  {
+   "county": "Highland",
+   "saint": "Columba",
+   "count": 4,
+   "lq": 41.95,
+   "second": "Andrew",
+   "top": "Andrew",
+   "n": 34
+  },
+  {
+   "county": "Isle of Wight",
+   "saint": "James",
+   "count": 4,
+   "lq": 1.98,
+   "second": "John the Baptist",
+   "top": "All Saints",
+   "n": 62
+  },
+  {
+   "county": "Kent",
+   "saint": "Dunstan",
+   "count": 4,
+   "lq": 6.21,
+   "second": "Peter and Paul",
+   "top": "Mary",
+   "n": 501
+  },
+  {
+   "county": "Lancashire",
+   "saint": "Anne",
+   "count": 8,
+   "lq": 3.96,
+   "second": "Cuthbert",
+   "top": "James",
+   "n": 303
+  },
+  {
+   "county": "Leicestershire",
+   "saint": "Denys",
+   "count": 5,
+   "lq": 8.46,
+   "second": "Helen",
+   "top": "Mary",
+   "n": 316
+  },
+  {
+   "county": "Lincolnshire",
+   "saint": "Helen",
+   "count": 22,
+   "lq": 5.25,
+   "second": "Denys",
+   "top": "All Saints",
+   "n": 658
+  },
+  {
+   "county": "Merseyside",
+   "saint": "Emmanuel",
+   "count": 5,
+   "lq": 4.2,
+   "second": "Anne",
+   "top": "Mary",
+   "n": 234
+  },
+  {
+   "county": "Mid Glamorgan",
+   "saint": "David",
+   "count": 10,
+   "lq": 26.64,
+   "second": "Mary",
+   "top": "David",
+   "n": 63
+  },
+  {
+   "county": "Norfolk",
+   "saint": "Edmund",
+   "count": 15,
+   "lq": 4.8,
+   "second": "Botolph",
+   "top": "Mary",
+   "n": 704
+  },
+  {
+   "county": "North Yorkshire",
+   "saint": "Hilda",
+   "count": 15,
+   "lq": 11.83,
+   "second": "Oswald",
+   "top": "Mary",
+   "n": 571
+  },
+  {
+   "county": "Northamptonshire",
+   "saint": "Peter and Paul",
+   "count": 22,
+   "lq": 4.3,
+   "second": "Botolph",
+   "top": "Mary",
+   "n": 305
+  },
+  {
+   "county": "Northumberland",
+   "saint": "Aidan",
+   "count": 7,
+   "lq": 13.87,
+   "second": "Cuthbert",
+   "top": "Mary",
+   "n": 160
+  },
+  {
+   "county": "Nottinghamshire",
+   "saint": "Wilfrid",
+   "count": 8,
+   "lq": 8.44,
+   "second": "Swithun",
+   "top": "All Saints",
+   "n": 295
+  },
+  {
+   "county": "Oxfordshire",
+   "saint": "Giles",
+   "count": 11,
+   "lq": 3.2,
+   "second": "Lawrence",
+   "top": "Mary",
+   "n": 377
+  },
+  {
+   "county": "Powys",
+   "saint": "David",
+   "count": 15,
+   "lq": 19.66,
+   "second": "Michael",
+   "top": "Mary",
+   "n": 128
+  },
+  {
+   "county": "Rutland",
+   "saint": "Peter and Paul",
+   "count": 7,
+   "lq": 8.35,
+   "second": "Nicholas",
+   "top": "Mary",
+   "n": 50
+  },
+  {
+   "county": "Scottish Borders",
+   "saint": "Andrew",
+   "count": 4,
+   "lq": 4.49,
+   "second": null,
+   "top": "Andrew",
+   "n": 18
+  },
+  {
+   "county": "Shropshire",
+   "saint": "Chad",
+   "count": 9,
+   "lq": 6.8,
+   "second": "John the Baptist",
+   "top": "Mary",
+   "n": 298
+  },
+  {
+   "county": "Somerset",
+   "saint": "Mary Magdalene",
+   "count": 18,
+   "lq": 2.35,
+   "second": "Thomas Becket",
+   "top": "Mary",
+   "n": 573
+  },
+  {
+   "county": "South Glamorgan",
+   "saint": "Michael",
+   "count": 6,
+   "lq": 1.34,
+   "second": "Peter",
+   "top": "Mary",
+   "n": 89
+  },
+  {
+   "county": "South Yorkshire",
+   "saint": "Thomas",
+   "count": 9,
+   "lq": 3.57,
+   "second": "Helen",
+   "top": "Mary",
+   "n": 220
+  },
+  {
+   "county": "Staffordshire",
+   "saint": "Chad",
+   "count": 11,
+   "lq": 7.72,
+   "second": "Saviour",
+   "top": "Mary",
+   "n": 321
+  },
+  {
+   "county": "Suffolk",
+   "saint": "Gregory",
+   "count": 4,
+   "lq": 4.31,
+   "second": "Edmund",
+   "top": "Mary",
+   "n": 530
+  },
+  {
+   "county": "Surrey",
+   "saint": "Francis",
+   "count": 5,
+   "lq": 4.19,
+   "second": "Good Shepherd",
+   "top": "Mary",
+   "n": 262
+  },
+  {
+   "county": "Tyne and Wear",
+   "saint": "Aidan",
+   "count": 4,
+   "lq": 7.73,
+   "second": "Cuthbert",
+   "top": "Mary",
+   "n": 164
+  },
+  {
+   "county": "Warwickshire",
+   "saint": "Leonard",
+   "count": 9,
+   "lq": 3.59,
+   "second": "Giles",
+   "top": "Mary",
+   "n": 240
+  },
+  {
+   "county": "West Glamorgan",
+   "saint": "David",
+   "count": 8,
+   "lq": 18.91,
+   "second": "Peter",
+   "top": "Mary",
+   "n": 71
+  },
+  {
+   "county": "West Midlands",
+   "saint": "Philip",
+   "count": 5,
+   "lq": 5.16,
+   "second": "Chad",
+   "top": "Mary",
+   "n": 307
+  },
+  {
+   "county": "West Sussex",
+   "saint": "Richard",
+   "count": 4,
+   "lq": 19.02,
+   "second": "Wilfrid",
+   "top": "Mary",
+   "n": 240
+  },
+  {
+   "county": "West Yorkshire",
+   "saint": "Wilfrid",
+   "count": 6,
+   "lq": 5.23,
+   "second": "Aidan",
+   "top": "Mary",
+   "n": 357
+  },
+  {
+   "county": "Wiltshire",
+   "saint": "Holy Cross",
+   "count": 9,
+   "lq": 3.54,
+   "second": "Giles",
+   "top": "Mary",
+   "n": 360
+  },
+  {
+   "county": "Worcestershire",
+   "saint": "Leonard",
+   "count": 8,
+   "lq": 2.99,
+   "second": "Bartholomew",
+   "top": "Mary",
+   "n": 256
+  }
+ ],
+ "concentrated": [
+  {
+   "saint": "Petroc",
+   "n": 19,
+   "top_county": "Devon",
+   "top_share": 68.4,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Beuno",
+   "n": 10,
+   "top_county": "Gwynedd",
+   "top_share": 60.0,
+   "england": 10.0,
+   "wales": 90.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Cadoc",
+   "n": 14,
+   "top_county": "Gwent",
+   "top_share": 50.0,
+   "england": 0.0,
+   "wales": 100.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Mildred",
+   "n": 10,
+   "top_county": "Kent",
+   "top_share": 50.0,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Kentigern",
+   "n": 20,
+   "top_county": "Cumbria",
+   "top_share": 40.0,
+   "england": 45.0,
+   "wales": 5.0,
+   "scotland": 50.0
+  },
+  {
+   "saint": "Hilda",
+   "n": 38,
+   "top_county": "North Yorkshire",
+   "top_share": 39.5,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Edith",
+   "n": 13,
+   "top_county": "Lincolnshire",
+   "top_share": 38.5,
+   "england": 92.3,
+   "wales": 7.7,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Boniface",
+   "n": 13,
+   "top_county": "Devon",
+   "top_share": 38.5,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Matthias",
+   "n": 14,
+   "top_county": "Greater London",
+   "top_share": 35.7,
+   "england": 92.9,
+   "wales": 7.1,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Richard",
+   "n": 15,
+   "top_county": "East Sussex",
+   "top_share": 33.3,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Holy Redeemer",
+   "n": 12,
+   "top_county": "Greater London",
+   "top_share": 33.3,
+   "england": 91.7,
+   "wales": 0.0,
+   "scotland": 8.3
+  },
+  {
+   "saint": "Pancras",
+   "n": 15,
+   "top_county": "Devon",
+   "top_share": 33.3,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Benedict",
+   "n": 12,
+   "top_county": "Lincolnshire",
+   "top_share": 33.3,
+   "england": 91.7,
+   "wales": 8.3,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Epiphany",
+   "n": 10,
+   "top_county": "North Yorkshire",
+   "top_share": 30.0,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Jude",
+   "n": 21,
+   "top_county": "Greater London",
+   "top_share": 28.6,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Holy Family",
+   "n": 11,
+   "top_county": "Merseyside",
+   "top_share": 27.3,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Dunstan",
+   "n": 22,
+   "top_county": "Greater London",
+   "top_share": 27.3,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Alban",
+   "n": 50,
+   "top_county": "Greater London",
+   "top_share": 24.0,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Oswald",
+   "n": 76,
+   "top_county": "North Yorkshire",
+   "top_share": 23.7,
+   "england": 97.4,
+   "wales": 0.0,
+   "scotland": 2.6
+  },
+  {
+   "saint": "Holy Innocents",
+   "n": 18,
+   "top_county": "Greater London",
+   "top_share": 22.2,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Helen",
+   "n": 109,
+   "top_county": "Lincolnshire",
+   "top_share": 20.2,
+   "england": 99.1,
+   "wales": 0.0,
+   "scotland": 0.9
+  },
+  {
+   "saint": "Agnes",
+   "n": 15,
+   "top_county": "Greater Manchester",
+   "top_share": 20.0,
+   "england": 93.3,
+   "wales": 6.7,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Gabriel",
+   "n": 30,
+   "top_county": "Greater London",
+   "top_share": 20.0,
+   "england": 93.3,
+   "wales": 6.7,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Edmund",
+   "n": 76,
+   "top_county": "Norfolk",
+   "top_share": 19.7,
+   "england": 97.4,
+   "wales": 2.6,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Augustine",
+   "n": 77,
+   "top_county": "Greater London",
+   "top_share": 19.5,
+   "england": 97.4,
+   "wales": 2.6,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Emmanuel",
+   "n": 87,
+   "top_county": "Greater London",
+   "top_share": 18.4,
+   "england": 95.4,
+   "wales": 4.6,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Ascension",
+   "n": 50,
+   "top_county": "Greater London",
+   "top_share": 18.0,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Saviour",
+   "n": 89,
+   "top_county": "Greater London",
+   "top_share": 18.0,
+   "england": 97.8,
+   "wales": 1.1,
+   "scotland": 1.1
+  },
+  {
+   "saint": "David",
+   "n": 102,
+   "top_county": "Dyfed",
+   "top_share": 17.6,
+   "england": 24.5,
+   "wales": 69.6,
+   "scotland": 5.9
+  },
+  {
+   "saint": "Cuthbert",
+   "n": 103,
+   "top_county": "Cumbria",
+   "top_share": 17.5,
+   "england": 94.2,
+   "wales": 0.0,
+   "scotland": 5.8
+  },
+  {
+   "saint": "Barnabas",
+   "n": 131,
+   "top_county": "Greater London",
+   "top_share": 16.8,
+   "england": 96.9,
+   "wales": 2.3,
+   "scotland": 0.8
+  },
+  {
+   "saint": "Botolph",
+   "n": 54,
+   "top_county": "Norfolk",
+   "top_share": 16.7,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Gregory",
+   "n": 30,
+   "top_county": "Devon",
+   "top_share": 16.7,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Wilfrid",
+   "n": 55,
+   "top_county": "North Yorkshire",
+   "top_share": 16.4,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Hugh",
+   "n": 19,
+   "top_county": "Lincolnshire",
+   "top_share": 15.8,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Patrick",
+   "n": 19,
+   "top_county": "Greater London",
+   "top_share": 15.8,
+   "england": 89.5,
+   "wales": 5.3,
+   "scotland": 5.3
+  },
+  {
+   "saint": "Denys",
+   "n": 32,
+   "top_county": "Leicestershire",
+   "top_share": 15.6,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Resurrection",
+   "n": 13,
+   "top_county": "South Glamorgan",
+   "top_share": 15.4,
+   "england": 84.6,
+   "wales": 15.4,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Simon and Jude",
+   "n": 13,
+   "top_county": "Dorset",
+   "top_share": 15.4,
+   "england": 100.0,
+   "wales": 0.0,
+   "scotland": 0.0
+  },
+  {
+   "saint": "Faith",
+   "n": 27,
+   "top_county": "Hampshire",
+   "top_share": 14.8,
+   "england": 92.6,
+   "wales": 7.4,
+   "scotland": 0.0
+  }
+ ]
+}
