@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Geography of Saints</title>
+<meta name="description" content="Church dedications across Great Britain mapped from OpenStreetMap: national saints, northern saints, Welsh and Cornish saints, and the counties whose saints are found nowhere else.">
+<meta property="og:title" content="The geography of saints">
+<meta property="og:description" content="Church dedications across Great Britain mapped: Mary everywhere, Andrew in Scotland, David in Wales, and nearly a hundred saints found only in Cornwall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Illuminated-manuscript palette: lapis, vermilion and gold leaf on vellum. */
+:root{
+  --bg:#f7f3ea; --ink:#1c1b22; --muted:#5d5a63; --rule:#dcd5c6; --panel:#ece6d9;
+  --lapis:#23407a; --verm:#b8381f; --gold:#b08a2e; --green:#3c6b45; --link:#23407a;
+  --display:"Cormorant SC",Georgia,serif; --serif:"Source Serif 4",Georgia,serif; --sans:"Inter","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131319;--ink:#e9e6ef;--muted:#a6a2ae;--rule:#34323d;--panel:#1d1c25;--lapis:#86a5e6;--verm:#ec8a72;--gold:#e1bb60;--green:#8cc495;--link:#9fb9ef;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131319;--ink:#e9e6ef;--muted:#a6a2ae;--rule:#34323d;--panel:#1d1c25;--lapis:#86a5e6;--verm:#ec8a72;--gold:#e1bb60;--green:#8cc495;--link:#9fb9ef;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18.5px/1.66 var(--serif);padding:0 16px}
+main{max-width:1180px;margin:0 auto;padding:46px 0 72px}
+.col{max-width:680px;margin:0 auto}
+h1{font:700 clamp(44px,8vw,92px)/.98 var(--display);margin:0 0 18px;color:var(--lapis);letter-spacing:.01em;text-wrap:balance}
+h1 .init{color:var(--verm);font-size:1.25em;line-height:.8}
+.dek{font-size:21px;line-height:1.5;color:var(--muted);margin:0 0 18px}
+.byline{font:400 14px/1.5 var(--sans);color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+h2{font:700 32px/1.1 var(--display);color:var(--lapis);margin:52px 0 12px;text-wrap:balance}
+p{margin:0 0 16px}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 8px;font-family:var(--sans)}
+.fact{border-left:3px solid var(--gold);padding:2px 0 2px 12px}
+.fact b{display:block;font:700 36px/1.05 var(--display);color:var(--verm);font-variant-numeric:tabular-nums}
+.fact span{font-size:14px;line-height:1.4;color:var(--muted)}
+@media (max-width:640px){.facts{grid-template-columns:1fr}body{font-size:17.5px}}
+.nations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;font-family:var(--sans);margin:18px 0}
+@media (max-width:720px){.nations{grid-template-columns:1fr}}
+.nation h3{font:700 22px/1.1 var(--display);color:var(--lapis);margin:0 0 6px}
+.nation .r{display:grid;grid-template-columns:110px minmax(0,1fr) 36px;gap:8px;align-items:center;font-size:14px;padding:2px 0;cursor:pointer}
+.nation .r:hover span:first-child{color:var(--verm)}
+.nation .t{height:12px}.nation .f{height:100%;background:var(--lapis);border-radius:0 2px 2px 0}
+.nation .r.own .f{background:var(--verm)}
+.nation .v{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.atlas{display:grid;grid-template-columns:minmax(0,1fr) 320px;margin:22px 0 8px;border:1px solid var(--rule);background:var(--panel)}
+.map{height:min(78vh,700px);min-height:440px}
+.side{padding:16px;border-left:1px solid var(--rule);font:400 15px/1.5 var(--sans);display:flex;flex-direction:column;gap:12px;max-height:min(78vh,700px);overflow:auto}
+@media (max-width:880px){.atlas{grid-template-columns:1fr}.map{height:62vh;min-height:360px}.side{border-left:0;border-top:1px solid var(--rule);max-height:none}}
+.side h3{font:700 30px/1 var(--display);margin:0;color:var(--verm)}
+.side input{width:100%;font:400 16px var(--sans);padding:9px 10px;border:1px solid var(--rule);border-radius:4px;background:var(--bg);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font:600 13px var(--sans);background:var(--bg);color:var(--ink);border:1px solid var(--rule);border-radius:14px;padding:4px 10px;cursor:pointer}
+.chips button:hover{border-color:var(--verm)}
+.big{font:700 36px/1 var(--display)}
+.note{font:400 13px/1.45 var(--sans);color:var(--muted)}
+.story{font:italic 400 16px/1.5 var(--serif);border-left:3px solid var(--gold);padding-left:10px}
+.side ol{margin:0;padding-left:20px}
+.leaflet-container{font:400 13px var(--sans);background:var(--panel)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font:400 15px var(--sans);font-variant-numeric:tabular-nums}
+th,td{padding:6px 8px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:13px}
+td.n,th.n{text-align:right}
+.saintlist{font:italic 400 15px/1.6 var(--serif);color:var(--muted)}
+.side table{font-size:13.5px}.side th,.side td{padding:5px 4px}
+.method li{margin-bottom:8px}
+footer{font:400 14px/1.6 var(--sans);color:var(--muted);border-top:1px solid var(--rule);margin-top:48px;padding-top:16px}
+</style>
+</head>
+<body>
+<main>
+<div class="col">
+<h1><span class="init">T</span>he Geography of Saints</h1>
+<p class="dek">Most British churches are named for a saint, and the choice was rarely random. I mapped the dedications of churches across Great Britain from OpenStreetMap to see where each saint's following lies.</p>
+<p class="byline">Tristan Hotham · Researcher of campaigns and platforms · 2026</p>
+<div class="facts" id="facts"></div>
+
+<h2>Three nations, three saints</h2>
+<p>Mary leads in England and Wales, as she does across Latin Christendom. Below her the nations part ways. In England, All Saints, Peter, Andrew and Michael follow. In Wales, David is second, ahead of every apostle. In Scotland, Andrew comes first. National saints show up in the dedications, not just on flags. Red bars mark saints who belong to that nation.</p>
+<div class="nations" id="nations"></div>
+
+<h2>Find a saint</h2>
+<p>Every dedication can be mapped. Choose a saint to see their churches and the counties where they are commonest relative to all dedicated churches there. Northern saints such as Cuthbert, Aidan, Oswald and Wilfrid trace the old kingdom of Northumbria. Chad belongs to Mercia, Botolph and Edmund to East Anglia, and Petroc to the far south-west.</p>
+</div>
+
+<div class="atlas">
+  <div id="map" class="map" aria-label="Map of churches dedicated to the chosen saint"></div>
+  <aside class="side">
+    <label for="q" class="note">Map any dedication</label>
+    <input id="q" list="names" placeholder="e.g. Cuthbert" autocomplete="off">
+    <datalist id="names"></datalist>
+    <div class="chips" id="chips"></div>
+    <div><h3 id="nm"></h3><div class="big" id="cnt"></div><div class="note" id="rank"></div></div>
+    <div class="story" id="story"></div>
+    <div><b>Where the dedication is strongest</b><div class="note">Share of the county's dedicated churches (counties with three or more), shaded on the map</div><ol id="where"></ol></div>
+  </aside>
+</div>
+
+<div class="col">
+<h2>Saints found nowhere else</h2>
+<p>The clearest regional pattern is one of local saints. These are dedications that occur in one county and nowhere else in Britain. Cornwall stands far ahead with <span id="cornwall"></span> such saints, most of them obscure holy men and women of the fifth and sixth centuries. They include Austell, Breaca, Buryan, Endellion, Euny and Gwinear, and many are remembered in the parish names. The Welsh counties come next. Their <i>llan</i> churches carry the names of their founders.</p>
+<div class="tbl"><table><thead><tr><th>County</th><th class="n">Saints found only here</th><th>Some of them</th></tr></thead><tbody id="lt"></tbody></table></div>
+<p class="note">Counts depend on how churches are named in OpenStreetMap, and a few variant spellings of one saint may count twice.</p>
+
+<h2>Each county's distinctive saint</h2>
+<p>Mary is the top dedication in almost every county. A fairer question is which saint is most over-represented in each county compared with Britain as a whole, among saints with 15 or more churches. The answers sketch a map of early medieval Britain.</p>
+</div>
+<div class="atlas">
+  <div id="map2" class="map" aria-label="Map of the most distinctive saint in each county"></div>
+  <aside class="side">
+    <b>Most distinctive saint by county</b>
+    <p class="note">"×" is how many times more common the dedication is than the national rate. Counties need four or more churches of that saint. Deeper blue means more distinctive. Click a county to map its saint.</p>
+    <div class="tbl"><table><thead><tr><th>County</th><th>Saint</th><th class="n">×</th></tr></thead><tbody id="dt"></tbody></table></div>
+  </aside>
+</div>
+
+<div class="col">
+<h2>Method</h2>
+<ol class="method">
+<li>Churches are OpenStreetMap features tagged <code>amenity=place_of_worship</code> and <code>religion=christian</code> in Great Britain, downloaded through the Overpass API in October 2026.</li>
+<li>The dedication is read from the <code>dedication</code> tag where present, and otherwise from the name ("St Mary's Church", "Eglwys Sant Pedr", "All Saints"). Welsh forms (Sant, Santes, Dewi, Mair, Mihangel) are translated. Joint dedications such as Peter and Paul are kept together.</li>
+<li>The analysis keeps churches of the established churches (Church of England, Church in Wales, Church of Scotland, Scottish Episcopal) and churches with no denomination tagged. These are mostly old parish churches. Roman Catholic and nonconformist churches, mostly built in the nineteenth and twentieth centuries, are left out. So are churches without a recognisable dedication.</li>
+<li>Counties are ceremonial counties (England), preserved counties (Wales) and council areas (Scotland). Distinctiveness is the location quotient: the saint's share of a county's dedicated churches divided by its share in Britain.</li>
+</ol>
+<p class="note">Many Scottish parish churches are named after their parish rather than a saint, so Scotland is thinly covered. Victorian churches added many new dedications (Christ Church, Emmanuel, Holy Trinity), so modern towns look more "national" than old villages.</p>
+</div>
+
+<div class="col">
+<footer>
+<p><b>Data and code:</b> <a href="https://github.com/Tristan-Hotham/saints-geography">github.com/Tristan-Hotham/saints-geography</a> · archived at <a href="https://doi.org/10.5281/zenodo.23676497">doi:10.5281/zenodo.23676497</a></p>
+<p><b>Sources:</b> church data © OpenStreetMap contributors, Open Database Licence. County boundaries: Office for National Statistics, Open Government Licence v3, contains OS data © Crown copyright and database right. Base map © Esri.</p>
+<p>AI use: written with drafting, data and coding help from Claude (Anthropic).</p>
+<p>Tristan Hotham, independent researcher, 2026.</p>
+</footer>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = n => Number(n).toLocaleString('en-GB');
+const STORY = {
+ 'Mary':'The Virgin Mary, the commonest dedication in Britain, as in most of western Christendom.',
+ 'All Saints':'Every saint at once. The dedication is commonest in the east: Norfolk, Suffolk, Bedfordshire, Northamptonshire and the East Riding.',
+ 'Andrew':'The apostle and patron saint of Scotland. His relics were said to have been brought to St Andrews.',
+ 'David':'Dewi Sant, sixth-century bishop and patron saint of Wales, whose cult centred on St Davids in Pembrokeshire.',
+ 'Cuthbert':'Seventh-century monk and bishop of Lindisfarne. His body was carried across the north by the monks fleeing the Vikings and now rests in Durham Cathedral.',
+ 'Aidan':'The Irish monk from Iona who founded Lindisfarne in 635 at the invitation of King Oswald.',
+ 'Oswald':'King of Northumbria, killed in battle in 642 and soon venerated as a martyr.',
+ 'Wilfrid':'Seventh-century bishop of York and founder of Ripon and Hexham.',
+ 'Hilda':'Abbess of Whitby, host of the Synod of Whitby in 664.',
+ 'Chad':'Bishop of the Mercians, based at Lichfield, who died in 672.',
+ 'Botolph':'East Anglian abbot of the seventh century and a patron of travellers, often found at town gates.',
+ 'Edmund':'King of East Anglia, killed by the Danes in 869. His shrine became Bury St Edmunds.',
+ 'Petroc':'Sixth-century Welsh-born abbot who worked in Cornwall and Devon. Padstow is "Petroc\'s stow".',
+ 'Columba':'The Irish founder of Iona (563) and apostle of the Picts.',
+ 'Ninian':'An early missionary to the southern Picts, associated with Whithorn in Galloway.',
+ 'Kentigern':'Also called Mungo, the patron of Glasgow. He is said to have worked in Cumbria too.',
+ 'Margaret':'Several saints share the name. In Scotland she is usually Queen Margaret (d. 1093).',
+ 'Helen':'Helena, mother of the emperor Constantine, said by medieval legend to have been British. She is popular in Lincolnshire and Yorkshire.',
+ 'Michael':'The archangel, often given to churches on hilltops. His dedications are strongest along the Welsh border, in Herefordshire, Shropshire, Worcestershire and Powys.',
+ 'Peter':'Chief of the apostles. Joint dedications with Paul are counted separately.',
+ 'Bride':'Brigid of Kildare, the Irish abbess, whose cult spread around the Irish Sea.',
+ 'Cadoc':'Sixth-century Welsh abbot of Llancarfan in Glamorgan.',
+ 'Beuno':'Seventh-century abbot of Clynnog Fawr in Gwynedd.',
+ 'Thomas Becket':'The archbishop murdered in Canterbury Cathedral in 1170 and quickly made a saint.',
+ 'Dunstan':'Tenth-century Archbishop of Canterbury and reformer.',
+ 'Swithun':'Ninth-century Bishop of Winchester, best known for his weather legend.',
+ 'Alban':'Britain\'s first recorded martyr, executed at Verulamium (St Albans).',
+ 'Richard':'Richard of Chichester, thirteenth-century bishop of Chichester.',
+ 'Mildred':'Seventh-century abbess of Minster-in-Thanet in Kent.'
+};
+Promise.all([fetch('data/saints.json').then(r=>r.json()), fetch('data/counties.geojson').then(r=>r.json())]).then(([D, G]) => {
+  const idx = Object.fromEntries(D.names.map((n,i)=>[n,i]));
+  const corn = (D.local.find(x=>x[0]==='Cornwall')||[0,0])[1];
+  document.getElementById('cornwall').textContent = corn;
+  document.getElementById('facts').innerHTML = [
+    [fmt(D.n_hist), 'dedicated parish and established churches mapped'],
+    [fmt(D.names.length), 'different dedications'],
+    [corn, 'saints found in Cornwall and nowhere else in Britain']
+  ].map(([n,t]) => `<div class="fact"><b>${n}</b><span>${t}</span></div>`).join('');
+  const OWN = {England:['George','Edmund','Cuthbert','Chad','Alban','Hilda','Botolph','Oswald','Wilfrid','Aidan'], Wales:['David','Cadoc','Beuno','Teilo','Tysilio','Deiniol','Padarn','Illtud'], Scotland:['Andrew','Columba','Ninian','Margaret','Kentigern','Machar','Bride']};
+  document.getElementById('nations').innerHTML = ['England','Wales','Scotland'].map(n => { const t = Object.entries(D.nation_top[n]).slice(0,10), m = t[0][1];
+    return `<div class="nation"><h3>${n}</h3>${t.map(([s,c]) => `<div class="r ${OWN[n].includes(s)?'own':''}" data-n="${s}" role="button" tabindex="0"><span>${s}</span><div class="t"><div class="f" style="width:${100*c/m}%"></div></div><span class="v">${fmt(c)}</span></div>`).join('')}</div>`; }).join('');
+  document.getElementById('names').innerHTML = D.names.map(n=>`<option value="${n}">`).join('');
+  const chips = ['Cuthbert','Chad','Botolph','Edmund','Helen','Petroc','David','Andrew','Columba','Kentigern','Hilda','Oswald'];
+  document.getElementById('chips').innerHTML = chips.filter(c=>c in idx).map(c=>`<button data-n="${c}">${c}</button>`).join('');
+
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches, ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/';
+  const base = m => { L.tileLayer(ESRI + (dark?'World_Dark_Gray_Base':'World_Light_Gray_Base') + '/MapServer/tile/{z}/{y}/{x}', {maxNativeZoom:16, attribution:'Base map © Esri, HERE, Garmin · Churches © OpenStreetMap contributors (ODbL)'}).addTo(m); m.attributionControl.setPrefix(false); m.on('focus',()=>m.scrollWheelZoom.enable()); };
+  const map = L.map('map', {zoomSnap:.25, minZoom:5, maxZoom:16, scrollWheelZoom:false}).fitBounds([[50,-5.8],[58.7,1.8]]); base(map);
+  const R = L.canvas({padding:.3});
+  const RAMP = ['#e7ebf4','#c8d2ea','#a2b4dc','#7b93c9','#5873b0','#3a5594','#223a73'];
+  let shade = {};
+  const cl = L.geoJSON(G, {style: () => ({color: css('--bg'), weight:.8, fillOpacity:0})}).addTo(map);
+  const pts = L.layerGroup().addTo(map);
+  function show(n) {
+    if (!(n in idx)) return;
+    const k = idx[n], P = D.pts.filter(p => p[2]===k), per = new Array(D.counties.length).fill(0);
+    P.forEach(p => per[p[3]]++);
+    const rate = per.map((c,i) => 100*c/D.county_n[i]), m = Math.max(...rate) || 1;
+    shade = Object.fromEntries(D.counties.map((c,i) => [c, per[i] ? RAMP[Math.min(6, Math.floor(rate[i]/m*7))] : 'transparent']));
+    cl.setStyle(f => ({color: css('--bg'), weight:.8, fillOpacity:.65, fillColor: shade[f.properties.county] || 'transparent'}));
+    pts.clearLayers();
+    P.forEach(p => L.circleMarker([p[0],p[1]], {renderer:R, radius:3.8, weight:1, color:'#fff', fillColor: css('--verm'), fillOpacity:1}).addTo(pts));
+    document.getElementById('nm').textContent = n;
+    document.getElementById('cnt').textContent = fmt(D.counts[k]) + (D.counts[k]===1?' church':' churches');
+    document.getElementById('rank').textContent = `Number ${fmt(k+1)} of ${fmt(D.names.length)} dedications`;
+    const st = document.getElementById('story'); st.textContent = STORY[n] || ''; st.style.display = STORY[n] ? '' : 'none';
+    const order = rate.map((r,i)=>[r,i]).filter(x=>per[x[1]]>=3).sort((a,b)=>b[0]-a[0]).slice(0,6);
+    document.getElementById('where').innerHTML = order.map(([r,i]) => `<li>${D.counties[i]} <span class="note">${r.toFixed(1)}% · ${per[i]} churches</span></li>`).join('');
+    document.getElementById('q').value = n;
+  }
+  const go = n => { show(n); document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'}); };
+  document.querySelectorAll('.nation .r').forEach(b => { b.onclick = () => go(b.dataset.n); b.onkeydown = e => { if (e.key==='Enter') go(b.dataset.n); }; });
+  document.querySelectorAll('#chips button').forEach(b => b.onclick = () => show(b.dataset.n));
+  document.getElementById('q').addEventListener('change', e => { const v = e.target.value.trim(); const hit = D.names.find(x => x.toLowerCase() === v.toLowerCase()); if (hit) show(hit); });
+  show('Cuthbert');
+
+  document.getElementById('lt').innerHTML = D.local.slice(0,8).map(([c,n]) => `<tr><td>${c}</td><td class="n">${n}</td><td class="saintlist">${(D.local_names[c]||[]).slice(0,12).join(', ')}${n>12?'…':''}</td></tr>`).join('');
+
+  const map2 = L.map('map2', {zoomSnap:.25, minZoom:5, maxZoom:12, scrollWheelZoom:false}).fitBounds([[50,-5.8],[58.7,1.8]]); base(map2);
+  const dist = Object.fromEntries(D.distinct.map(d => [d.county, d]));
+  const PAL = ['--lapis','--verm','--gold','--green'];
+  const sn = [...new Set(D.distinct.map(d=>d.saint))];
+  L.geoJSON(G, {style: f => { const d = dist[f.properties.county]; return {color: css('--bg'), weight:.8, fillOpacity: d ? Math.min(.9, .3 + d.lq/25) : .1, fillColor: d ? css('--lapis') : css('--muted')}; },
+    onEachFeature: (f, l) => { const d = dist[f.properties.county]; if (d) { l.bindTooltip(`<b>${f.properties.county}</b><br>${d.saint} · ${d.count} churches · ${d.lq.toFixed(1)}×`, {sticky:true}); l.on('click', () => go(d.saint)); } }}).addTo(map2);
+  const lab = L.layerGroup().addTo(map2);
+  L.geoJSON(G).eachLayer(l => { const d = dist[l.feature.properties.county]; if (d && d.lq >= 5) L.marker(l.getBounds().getCenter(), {icon: L.divIcon({className:'', html:`<span style="font:600 11px var(--sans);color:var(--ink);text-shadow:0 0 3px var(--bg),0 0 3px var(--bg);white-space:nowrap">${d.saint}</span>`, iconSize:[0,0]}), interactive:false}).addTo(lab); });
+  document.getElementById('dt').innerHTML = D.distinct.slice().sort((a,b)=>b.lq-a.lq).map(d => `<tr><td>${d.county}</td><td><a href="#map" data-n="${d.saint}">${d.saint}</a></td><td class="n">${d.lq.toFixed(1)}</td></tr>`).join('');
+  document.querySelectorAll('#dt a').forEach(a => a.onclick = e => { e.preventDefault(); go(a.dataset.n); });
+});
+</script>
+</body>
+</html>
